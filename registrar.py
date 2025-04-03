@@ -1,14 +1,16 @@
-from datos import *
+from datos import fotografia, guardar_datos
 
-from datos import fotografia, cargar_datos, guardar_datos
-from datos import *
 
 def registrar_servicios_fotograficos():
     id = f"F-{len(fotografia) + 1:03d}" 
     
     nombre = input("ingrese el nombre del paquete fotografico: ")
-    precio = float(input("ingrese el precio del paquete fotografico: "))
-
+    try:
+        precio = float(input("ingrese el precio del paquete fotografico: "))
+        if precio <= 0:
+            raise ValueError("El precio debe ser mayor que cero.")
+    except ValueError:
+        raise ValueError("El precio debe ser mayor que cero.")
     while True:
         tipo = int(input("Elija tipo de evento segun corresponda:\n1. Boda\n2. Retrato\n3. Producto\nElija una opcion: "))
         if tipo == 1:
@@ -22,8 +24,13 @@ def registrar_servicios_fotograficos():
             break
         else:
             print("Opción no válida. Intente nuevamente.")
+    try:
+        duracion = int(input("Ingrese la duración del servicio en horas: "))
+        if duracion <= 0:
+            raise ValueError("La duración debe ser mayor que cero.")
+    except ValueError:
+        raise ValueError("La duración debe ser mayor que cero.")
 
-    duracion = int(input("Ingrese la duración del servicio en horas: "))
     fotografia[id] = {
         "nombre": nombre,
         "precio": precio,
@@ -52,10 +59,14 @@ def modificar_servicio():
         return
     
     nombre = input("ingrese el nombre del paquete fotografico: ")
-    precio = float(input("ingrese el precio del paquete fotografico: "))
-
+    try:
+        precio = float(input("ingrese el precio del paquete fotografico: "))
+        if precio <= 0:
+            raise ValueError("El precio debe ser mayor que cero.")
+    except ValueError:
+        raise ValueError("El precio debe ser mayor que cero.")
     while True:
-        tipo = int(input("Elija tipo de evento segun corresponda:\n1. Boda\n2. Retrato\n3. Producto\nElija una Opcion:"))
+        tipo = int(input("Elija tipo de evento segun corresponda:\n1. Boda\n2. Retrato\n3. Producto\nElija una opcion: "))
         if tipo == 1:
             evento = "Boda"
             break
@@ -67,8 +78,13 @@ def modificar_servicio():
             break
         else:
             print("Opción no válida. Intente nuevamente.")
+    try:
+        duracion = int(input("Ingrese la duración del servicio en horas: "))
+        if duracion <= 0:
+            raise ValueError("La duración debe ser mayor que cero.")
+    except ValueError:
+        raise ValueError("La duración debe ser mayor que cero.")
 
-    duracion = int(input("Ingrese la duración del servicio en horas: "))
 
     fotografia[id].update({
         "nombre": nombre,
@@ -76,7 +92,7 @@ def modificar_servicio():
         "evento": evento,
         "duracion": duracion
     })
-
+    guardar_datos(fotografia, "fotografia.json")
     print("Servicio fotográfico modificado con éxito.")
         
 

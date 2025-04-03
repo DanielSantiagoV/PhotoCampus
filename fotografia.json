@@ -1,1 +1,8 @@
-{}
+{
+    "F-001": {
+        "nombre": "FOTOS",
+        "precio": 20000.0,
+        "evento": "Retrato",
+        "duracion": 5
+    }
+}
