@@ -1,5 +1,5 @@
 from menu import menu_principal, pedir_opcion
-from registrar import registrar_servicios_fotograficos
+from registrar import registrar_servicios_fotograficos, eliminar_servicio_fotografico
 from datos import *
 
 cargar_datos("fotografia.json")
@@ -13,7 +13,7 @@ while True:
         case 2:
             print("Modificar")
         case 3:
-            print("Eliminar")
+            eliminar_servicio_fotografico()
         case 4:
             print("Saliendo...")
             break

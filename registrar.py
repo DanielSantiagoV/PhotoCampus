@@ -30,6 +30,15 @@ def registrar_servicios_fotograficos():
     guardar_datos(fotografia, "fotografia.json")
 
     print("Servicio fotográfico registrado con éxito.")
+
+def eliminar_servicio_fotografico():
+    id = input("Ingrese el ID del servicio fotográfico a eliminar: ")
+    if id in fotografia:
+        del fotografia[id]
+        guardar_datos(fotografia, "fotografia.json")
+        print("Servicio fotográfico eliminado con éxito.")
+    else:
+        print("ID no encontrado.")
     
 
         
