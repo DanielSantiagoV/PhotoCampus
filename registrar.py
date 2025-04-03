@@ -1,11 +1,13 @@
+from datos import *
+
 def registrar_servicios_fotograficos():
-    id = f"F-(len(fotografia)+1:03d)"
+    id = f"F-{len(fotografia) + 1:03d}" 
     
     nombre = input("ingrese el nombre del paquete fotografico: ")
     precio = float(input("ingrese el precio del paquete fotografico: "))
 
     while True:
-        tipo = int(input("Elija tipo de evento segun corresponda:\n1. Boda\n2. Retrato\n3. Producto"))
+        tipo = int(input("Elija tipo de evento segun corresponda:\n1. Boda\n2. Retrato\n3. Producto\nElija una opcion: "))
         if tipo == 1:
             evento = "Boda"
             break
@@ -19,13 +21,13 @@ def registrar_servicios_fotograficos():
             print("Opción no válida. Intente nuevamente.")
 
     duracion = int(input("Ingrese la duración del servicio en horas: "))
-    fotografia = {
-        "ID": id,
+    fotografia[id] = {
         "nombre": nombre,
         "precio": precio,
         "evento": evento,
         "duracion": duracion
     }
+    guardar_datos(fotografia, "fotografia.json")
 
     print("Servicio fotográfico registrado con éxito.")
     

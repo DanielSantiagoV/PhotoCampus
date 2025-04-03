@@ -23,4 +23,4 @@ def guardar_datos(datos, archivo ):
     except Exception:
         print("Error al guardar los datos.")
 
-        
+
