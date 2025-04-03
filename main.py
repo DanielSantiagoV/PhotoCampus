@@ -1,4 +1,5 @@
 from menu import menu_principal, pedir_opcion
+from registrar import registrar_servicios_fotograficos , modificar
 
 while True:
     menu_principal()
@@ -7,9 +8,10 @@ while True:
         case 1:
             print("Registrar servicios fotograficos")
         case 2:
-            print("Modificar")
+            modificar()
         case 3:
             print("Eliminar")
         case 4:
             print("Saliendo...")
             break
+
