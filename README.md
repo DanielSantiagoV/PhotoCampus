@@ -52,9 +52,12 @@ Sistema desarrollado en Python para implementar un sistema para registrar y gest
 ## 📁 Estructura del Proyecto
 ```
 photocampus/
+├── datos.py
+├── fotografia.json
 ├── main.py
 ├── menu.py 
 ├── readme. md
+├── registrar.py
 ```
 
 ## 🗄️ Estructura de los Datos
@@ -62,9 +65,18 @@ photocampus/
 ### Fotografia
 ```json
 {
- 
+    "F-001": {
+        "nombre": "FOTOS",
+        "precio": 20000.0,
+        "evento": "Retrato",
+        "duracion": 5
+    }
 }
 ```
+### 📄 Solucion Error Conflicto Merge: 
+- Se soluciona el error en el merge, al fusionar las ramas: 
+ -- main  and feature/modificar
+ 
 
 
 ### 📄 Creado Por:
