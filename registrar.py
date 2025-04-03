@@ -33,7 +33,7 @@ def registrar_servicios_fotograficos():
     print("Servicio fotográfico registrado con éxito.")
     
 
-    def modificar():
+    def modificar_servicio():
         """Modifica un pedido existente"""
         fotografia = cargar_datos("fotografia.json")
 
