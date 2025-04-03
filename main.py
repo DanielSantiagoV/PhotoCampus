@@ -7,7 +7,6 @@ while True:
     if opc == 1:
         print("Registrar servicios fotograficos")
     elif opc == 2:
-        print("Modificar")
         modificar_servicio()
     elif opc == 3:
         print("Eliminar")
