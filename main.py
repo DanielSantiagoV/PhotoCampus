@@ -21,3 +21,6 @@ while True:
         case 4:
             print("Saliendo...")
             break
+        case _:
+            print("Opción no válida. Intente nuevamente.")
+            continue

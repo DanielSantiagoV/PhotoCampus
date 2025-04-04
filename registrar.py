@@ -4,7 +4,7 @@ from datos import fotografia, guardar_datos
 def registrar_servicios_fotograficos():
     id = f"F-{len(fotografia) + 1:03d}" 
     
-    nombre = input("ingrese el nombre del paquete fotografico: ")
+    nombre = input("ingrese el nombre del paquete fotografico: ").capitalize()
     while True:
         try:
             precio = float(input("ingrese el precio del paquete fotografico: "))
@@ -36,6 +36,8 @@ def registrar_servicios_fotograficos():
         except ValueError:
             print("La duración debe ser un número entero positivo.")
             continue
+    
+    duracion = f"{str(duracion)} horas"
 
     fotografia[id] = {
         "nombre": nombre,
@@ -64,7 +66,7 @@ def modificar_servicio():
         print("ID no encontrado.")
         return
     
-    nombre = input("ingrese el nombre del paquete fotografico: ")
+    nombre = input("ingrese el nombre del paquete fotografico: ").capitalize()
     while True:
         try:
             precio = float(input("ingrese el precio del paquete fotografico: "))
