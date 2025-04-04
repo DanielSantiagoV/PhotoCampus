@@ -1,0 +1,24 @@
+CATÁLOGO DE SERVICIOS FOTOGRÁFICOS - PHOTOCAMPUS
+==================================================
+
+ID: F-001
+Nombre: Fotos
+Precio: $1500.00
+Tipo de Evento: Retrato
+Duración: 4 horas
+------------------------------
+
+ID: F-002
+Nombre: Hola
+Precio: $4000.00
+Tipo de Evento: Boda
+Duración: 3 horas
+------------------------------
+
+ID: F-003
+Nombre: Perro
+Precio: $1400.00
+Tipo de Evento: Boda
+Duración: 2 horas
+------------------------------
+

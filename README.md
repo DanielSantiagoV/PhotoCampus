@@ -1,81 +1,118 @@
-# 📸 PhotoCampus
+# 📸 PhotoCampus - Sistema de Gestión de Servicios Fotográficos
 
-Sistema desarrollado en Python para implementar un sistema para registrar y gestionar los servicios fotográficos disponibles. Para dicho proyectoel equipo de desarrollo quiere optimizar su colaboración utilizando herramientas de control de versiones como Git y GitHub para tener toda la trazabilidad del desarrollo del proyecto.
+Sistema para gestionar los servicios fotográficos ofrecidos por PhotoCampus, permitiendo registrar, modificar y consultar los diferentes paquetes fotográficos disponibles.
 
-## 🌟 Características Principales
+## 🚀 Características
 
-### 📦 Gestion De Servicios
-- 📌 Registro completo de servicios fotografico (boda, retrato, prodcuto, etc.).
-- 📂 Almacenamiento de información detallada:
-  - 🏷️ Nombre del paquete fotografico
-  - 🏗️ Categoría (productos, retrato, bodas)
-  - 📝 Descripción
-  - 🏭 Tipo de evento
-  - 💰 Precios de venta 
+- ✅ Registro de servicios fotográficos con nombre, precio, tipo de evento y duración
+- 📋 Listado de todos los servicios disponibles en formato de tabla
+- ✏️ Modificación de servicios existentes
+- 🗑️ Eliminación de servicios que ya no se ofrecen
+- 🔍 Búsqueda de servicios por diferentes criterios
+- 📊 Estadísticas sobre los servicios registrados
+- 💾 Exportación del catálogo en diferentes formatos
+- 🔄 Respaldo automático de datos
+- 🎨 Interfaz interactiva con Rich para mejor visualización
 
-### - ⚙️ Funcionalidades:
-  - ➕ Agregar, ✏️ editar y ❌ eliminar productos.
-  - 📋 Listado detallado de productos registrados.
+## 📂 Estructura del Proyecto
 
-### 📝 Gestión de Datos
-- 🛍️ Creación y administracion de nuevos servicios fotográficos
-- 📄 Registro detallado de servicios: 
-  - 🔢 Cantidad
-  - 💲 Precio por unidad
-  - #️⃣ Número de línea
-- 🔄 Funcionalidades completas de edición y eliminación de servicios que no se ofrecen.
-
-
-### 💾 Manejo de Archivos y Persistencia
-- 🗂️ Almacenamiento de datos en formato JSON.
-- 📂 Estructura organizada de archivos:
-  - `📜fotografia.json`: Información de productos.
-- ♻️ Persistencia de datos entre sesiones.
-- ✅ Manejo de errores y validaciones.
-
-### 👥 Interfaz de Usuario
-- 🏠 Menús intuitivos y organizados.
-- ✅ Confirmaciones para acciones críticas.
-- ℹ️ Mensajes informativos claros.
-- 📊 Tablas formateadas para mejor visualización.
-- 🎨 Uso de colores y emojis para mejor experiencia.
-
-## 🛠️ Tecnologías Utilizadas
-- 🐍 **Python 3**
-- 📄 **JSON** para almacenamiento de datos.
-
-## 📋 Requisitos
-- 🖥️ Python 3.6 o superior.
-
-
-## 📁 Estructura del Proyecto
 ```
-photocampus/
-├── datos.py
-├── fotografia.json
-├── main.py
-├── menu.py 
-├── readme. md
-├── registrar.py
+PhotoCampus/
+│
+├── 📁 modelo_datos/            # Modelos de datos
+│   ├── __init__.py
+│   └── servicio_fotografico.py # Clase para representar servicios
+│
+├── 📁 interfaz_usuario/        # Componentes de la interfaz de usuario
+│   ├── __init__.py
+│   ├── menu.py                 # Menús y opciones del sistema
+│   └── gestor_interfaz.py      # Funciones de interfaz para gestionar servicios
+│
+├── 📁 servicios/               # Lógica de negocio
+│   ├── __init__.py
+│   └── gestor_servicios.py     # Gestión de servicios fotográficos
+│
+├── 📁 almacenamiento/          # Persistencia de datos
+│   ├── __init__.py
+│   └── gestor_datos.py         # Funciones para cargar y guardar datos
+│
+├── 📁 utilidades/              # Herramientas auxiliares
+│   ├── __init__.py
+│   └── herramientas.py         # Funciones de utilidad general
+│
+├── 📁 respaldos/               # Respaldos automáticos de datos
+│
+├── 📁 exportaciones/           # Archivos exportados
+│
+├── main.py                     # Punto de entrada principal
+│
+└── fotografia.json             # Archivo de datos principal
 ```
 
-## 🗄️ Estructura de los Datos
+## 🛠️ Requisitos
 
-### Fotografia
-```json
-{
-    "F-001": {
-        "nombre": "FOTOS",
-        "precio": 20000.0,
-        "evento": "Retrato",
-        "duracion": 5 horas
-    }
-}
+- Python 3.8+
+- Bibliotecas:
+  - rich: Para interfaces de texto enriquecidas
+  - colorama: Para colores en consola
+
+## 📦 Instalación
+
+1. Clona este repositorio:
+   ```
+   git clone https://github.com/tu-usuario/PhotoCampus.git
+   ```
+
+2. Navega al directorio del proyecto:
+   ```
+   cd PhotoCampus
+   ```
+
+3. Instala las dependencias:
+   ```
+   pip install -r requirements.txt
+   ```
+
+## 🚀 Uso
+
+Para iniciar el sistema, ejecuta:
+
 ```
-### 📄 Solucion Error Conflicto Merge: 
-- Se soluciona el error en el merge, al fusionar las ramas: 
- -- main  and feature/modificar
- 
+python main.py
+```
+
+## 🗂️ Almacenamiento de Datos
+
+Los datos se almacenan en formato JSON en el archivo `fotografia.json`. Cada vez que se realiza una modificación, se crea automáticamente una copia de respaldo en la carpeta `respaldos/`.
+
+## 📊 Estadísticas
+
+El sistema genera estadísticas sobre:
+- Precio promedio, mínimo y máximo de los servicios
+- Distribución por tipo de evento
+- Distribución por duración
+
+## 📄 Exportación
+
+El sistema permite exportar el catálogo de servicios en:
+- 📝 Formato de texto plano (.txt)
+- 📊 Formato CSV (.csv)
+
+## 🤝 Contribución
+
+Si deseas contribuir a este proyecto, por favor:
+
+1. Haz un Fork del proyecto
+2. Crea una rama para tu funcionalidad (`git checkout -b feature/nueva-funcionalidad`)
+3. Realiza tus cambios
+4. Haz commit de tus cambios (`git commit -m 'Agrega nueva funcionalidad'`)
+5. Haz push a la rama (`git push origin feature/nueva-funcionalidad`)
+6. Abre un Pull Request
+
+
+---
+
+Desarrollado con ❤️ para PhotoCampus
 
 
 ### 📄 Creado Por:

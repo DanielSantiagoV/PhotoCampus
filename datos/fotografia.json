@@ -1,9 +1,9 @@
 {
     "F-001": {
-        "nombre": "Fotos",
-        "precio": 1500.0,
-        "evento": "Retrato",
-        "duracion": "4 horas"
+        "nombre": "Retrato",
+        "precio": 200.0,
+        "evento": "🎉 Evento especial",
+        "duracion": "2 horas"
     },
     "F-002": {
         "nombre": "Hola",
