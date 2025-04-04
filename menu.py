@@ -1,8 +1,9 @@
 menu = """
 1. Registrar servicios fotograficos
-2. Moficiar
-3. Eliminar
-4. Salir
+2. Listar servicios fotograficos
+3. Moficiar
+4. Eliminar
+5. Salir
 """
 
 def menu_principal():

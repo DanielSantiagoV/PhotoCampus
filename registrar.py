@@ -110,6 +110,18 @@ def modificar_servicio():
     guardar_datos(fotografia, "fotografia.json")
     print("Servicio fotográfico modificado con éxito.")
         
+def listar_servicios_fotograficos():
+    if not fotografia:
+        print("No hay servicios fotográficos registrados.")
+        return
 
+    print("Servicios Fotográficos Registrados:")
+    for id, datos in fotografia.items():
+        print(f"ID: {id}")
+        print(f"Nombre: {datos['nombre']}")
+        print(f"Precio: {datos['precio']}")
+        print(f"Evento: {datos['evento']}")
+        print(f"Duración: {datos['duracion']}")
+        print("-" * 20)
 
 
