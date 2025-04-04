@@ -98,6 +98,8 @@ def modificar_servicio():
         except ValueError:
             print("La duración debe ser un número entero positivo.")
             continue
+    
+    duracion = f"{str(duracion)} horas"
 
     fotografia[id].update({
         "nombre": nombre,
