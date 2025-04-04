@@ -4,5 +4,17 @@
         "precio": 1500.0,
         "evento": "Retrato",
         "duracion": "4 horas"
+    },
+    "F-002": {
+        "nombre": "Hola",
+        "precio": 4000.0,
+        "evento": "Boda",
+        "duracion": "3 horas"
+    },
+    "F-003": {
+        "nombre": "Perro",
+        "precio": 1400.0,
+        "evento": "Boda",
+        "duracion": "2 horas"
     }
 }

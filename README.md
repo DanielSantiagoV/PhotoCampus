@@ -13,7 +13,7 @@ Sistema desarrollado en Python para implementar un sistema para registrar y gest
   - 🏭 Tipo de evento
   - 💰 Precios de venta 
 
-·### - ⚙️ Funcionalidades:
+### - ⚙️ Funcionalidades:
   - ➕ Agregar, ✏️ editar y ❌ eliminar productos.
   - 📋 Listado detallado de productos registrados.
 
@@ -29,8 +29,7 @@ Sistema desarrollado en Python para implementar un sistema para registrar y gest
 ### 💾 Manejo de Archivos y Persistencia
 - 🗂️ Almacenamiento de datos en formato JSON.
 - 📂 Estructura organizada de archivos:
-  - `📜 datos_panaderia.json`: Información de productos.
-  - `📜 pedidos.json`: Registro de pedidos.
+  - `📜fotografia.json`: Información de productos.
 - ♻️ Persistencia de datos entre sesiones.
 - ✅ Manejo de errores y validaciones.
 
@@ -69,7 +68,7 @@ photocampus/
         "nombre": "FOTOS",
         "precio": 20000.0,
         "evento": "Retrato",
-        "duracion": 5
+        "duracion": 5 horas
     }
 }
 ```
@@ -80,7 +79,7 @@ photocampus/
 
 
 ### 📄 Creado Por:
-Este Proyecto fue desarrollado por ***Daniel Santiago Vinasco - Bryan Villabona *** 
+Este Proyecto fue desarrollado por ***Daniel Santiago Vinasco - Bryan Villabona***
 
 -------------------------------------------------------
 
@@ -99,5 +98,5 @@ Este Proyecto fue desarrollado por ***Daniel Santiago Vinasco - Bryan Villabona 
 
 ----------------------------------------------
 
-🔥 **¡Github: https://github.com/DanielSantiagoV?tab=repositories ! 🚀**
-🔥 **¡Github: https://github.com/BryanVillabona?tab=repositories ! 🚀**
+- 🔥 **¡Github: https://github.com/DanielSantiagoV?tab=repositories !🚀**
+- 🔥 **¡Github: https://github.com/BryanVillabona?tab=repositories ! 🚀**
