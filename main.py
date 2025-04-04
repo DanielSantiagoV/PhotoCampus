@@ -6,7 +6,11 @@ cargar_datos("fotografia.json")
 
 while True:
     menu_principal()
-    opc = pedir_opcion()
+    try:
+        opc = pedir_opcion()
+    except ValueError:
+        print("Error: Debe ingresar una opción válida.")
+        continue
     match opc:
         case 1:
             registrar_servicios_fotograficos()
